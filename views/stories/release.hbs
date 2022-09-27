@@ -1,5 +1,5 @@
 <h3 id="h3-center">Let It Go</h3>
-{{!-- <div class="row">
+ <div class="row">
   <form action="/release" method="POST" class="col s12">
     <div class="row">
       <div class="input-field">
@@ -16,19 +16,21 @@
         </select>
         <label for="status">Status</label>
       </div>
-    </div> --}}
-    <div class="release"></div>
-
-    <div class="row">
-      <div class="input-field">
-        <h5>Enter your thoughts you'd like to let go:</h5>
-        <textarea id="body" name="body"></textarea>
-      </div>
-    </div>
-
-    <div class="row">
-      <input type="submit" value="Save" class="btn" />
-      <a href="/dashboard" class="btn orange">Cancel</a>
-    </div>
-  </form>
+    </div> 
+<div class="release">
+  {{{story.body}}}
 </div>
+
+
+  <div class="row">
+    <div class="input-field">
+      <h5>Enter your thoughts you'd like to let go:</h5>
+      <textarea id="body" name="body"></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <input type="submit" value="Save" class="btn" />
+    <a href="/dashboard" class="btn orange">Cancel</a>
+  </div>
+</form>
