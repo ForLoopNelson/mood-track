@@ -1,27 +1,31 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release/{{_id}}" method="POST" class="col s12">
+  <form action="/release/{{_id}}" method="POST" class="col s12 getGone">
 
-    {{#if release}}
-    {{#each body}}
-<div class="release row">
-  <span>
-    {{{release.body}}}
-  </span>
+
+ 
+<div id="release">
+  
 </div>
-{{/each}}
-{{/if}}
+
 
 
   <div class="row">
     <div class="input-field z-depth-1">
       <h5>Enter your thoughts you'd like to let go:</h5>
-      <textarea id="body" name="body" value="body"></textarea>
+      <textarea id="body" name="body" value="body" class="getGone"></textarea>
     </div>
   </div>
 
   <div class="row">
-    <input type="submit" value="Release" class="btn" />
+    <input type="submit" value="Release" class="btn" id="letItGo" />
     <a href="/release" class="btn orange">Cancel</a>
   </div>
+    <script>
+    document.getElementsByClassName('getGone').addEventListener('input', copyToDiv);
+
+function copyToDiv() {
+  document.getElementById("release").innerHTML = document.getElementsByClassName("getGone").value;
+}
+  </script>
 </form>
