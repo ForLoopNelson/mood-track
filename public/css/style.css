@@ -14,3 +14,11 @@ p {
 .img-small {
   width: 180px;
 }
+
+#h3-center {
+  text-decoration: overline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1em;
+}
