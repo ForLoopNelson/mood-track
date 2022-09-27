@@ -1,36 +1,27 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release" method="POST" class="col s12">
-    <div class="row">
-      <div class="input-field">
-        <input type="text" id="title" name="title" />
-        <label for="title">Title</label>
-      </div>
-    </div>
+  <form action="/release/{{_id}}" method="POST" class="col s12">
 
-    <div class="row">
-      <div class="input-field">
-        <select id="status" name="status">
-          <option value="public" selected>Public</option>
-          <option value="private">Private</option>
-        </select>
-        <label for="status">Status</label>
-      </div>
-    </div> 
-<div class="release">
-  {{{story.body}}}
+    {{#if release}}
+    {{#each release}}
+<div class="release row">
+  <span>
+    {{{release.body}}}
+  </span>
 </div>
+{{/each}}
+{{/if}}
 
 
   <div class="row">
     <div class="input-field">
       <h5>Enter your thoughts you'd like to let go:</h5>
-      <textarea id="body" name="body" value="{{story.body}}"></textarea>
+      <textarea id="body" name="body" value="body"></textarea>
     </div>
   </div>
 
   <div class="row">
-    <input type="submit" value="Save" class="btn" />
-    <a href="/dashboard" class="btn orange">Cancel</a>
+    <input type="submit" value="Release" class="btn" />
+    <a href="/release" class="btn orange">Cancel</a>
   </div>
 </form>
