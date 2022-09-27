@@ -3,7 +3,7 @@
   <form action="/release/{{_id}}" method="POST" class="col s12">
 
     {{#if release}}
-    {{#each release}}
+    {{#each body}}
 <div class="release row">
   <span>
     {{{release.body}}}
@@ -14,7 +14,7 @@
 
 
   <div class="row">
-    <div class="input-field">
+    <div class="input-field z-depth-1">
       <h5>Enter your thoughts you'd like to let go:</h5>
       <textarea id="body" name="body" value="body"></textarea>
     </div>
