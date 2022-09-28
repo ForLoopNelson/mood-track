@@ -1,5 +1,3 @@
-//This is not in use yet!
-
 const mongoose = require("mongoose")
 
 const ReleaseSchema = new mongoose.Schema({
