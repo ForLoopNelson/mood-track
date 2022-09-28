@@ -6,6 +6,11 @@ const ReleaseSchema = new mongoose.Schema({
     required: true,
   },
 
+  status: {
+    type: String,
+    default: "private",
+  },
+
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
