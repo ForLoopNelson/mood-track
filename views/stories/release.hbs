@@ -1,13 +1,28 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release/{{_id}}" method="POST" class="col s12 getGone">
+  <form action="/release/{{release._id}}" method="POST" class="col s12 getGone">
 
-
- 
-<div id="release">
+{{#if release}}
   
-</div>
+      {{#each release}}
+        <tr>
+          <td><a href="/release/{{release._id}}">{{title}}</a></td>
+          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+          <td><span class="dash-status">{{status}}</span></td>
+         <ul>
+          <li>
+            {{{release.body}}}
+          </li>
+         </ul>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>You have not created any entries. Add one now!</p>
+{{/if}}
 
+<div id="insert"></div>
 
 
   <div class="row">
@@ -18,14 +33,13 @@
   </div>
 
   <div class="row">
-    <input type="submit" value="Release" class="btn" id="letItGo" />
+    <input type="submit" value="Release" class="btn" onclick="addText()" />
     <a href="/release" class="btn orange">Cancel</a>
   </div>
     <script>
-    document.getElementsByClassName('getGone').addEventListener('input', copyToDiv);
-
-function copyToDiv() {
-  document.getElementById("release").innerHTML = document.getElementsByClassName("getGone").value;
+      function addText(){
+   var x = document.getElementById("body").value;
+  document.getElementById("insert").innerHTML = x;
 }
   </script>
 </form>
