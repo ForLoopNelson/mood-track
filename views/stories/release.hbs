@@ -1,23 +1,22 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release/{{release._id}}" method="POST" class="col s12">
+  <form action="/release/{{_id}}" method="POST" class="col s12">
 
 {{#if release}}
   
       {{#each release}}
         <tr>
-          <td><a href="/release/{{release._id}}">{{title}}</a></td>
+         
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
          <ul>
           <li>
-            {{{body}}}
+            {{{release.body}}}
           </li>
          </ul>
         </tr>
       {{/each}}
-    </tbody>
-  </table>
+
 {{else}}
   <p>You have not created any entries. Add one now!</p>
 {{/if}}
@@ -36,10 +35,10 @@
     <input type="submit" value="Release" class="btn" onclick="addText()" />
     <a href="/release" class="btn orange">Cancel</a>
   </div>
-    <script>
+    {{!-- <script>
       function addText(){
    var x = document.getElementById("body").value;
   document.getElementById("insert").innerHTML = x;
 }
-  </script>
+  </script> --}}
 </form>
