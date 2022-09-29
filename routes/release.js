@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { ensureAuth } = require("../middleware/auth")
 
-const Release = require("../models/release")
+const Release = require("../models/Release")
 
 //@desc Showw add page
 //@Route GET /stories/add
@@ -27,7 +27,7 @@ router.post("/", ensureAuth, async (req, res) => {
 //@Route GET /stories
 router.get("/", ensureAuth, async (req, res) => {
   try {
-    const letItGo = await Release.find({ body: true })
+    const letItGo = await Release.find({ status: "private" })
       .populate("user")
       .sort({ createdAt: "desc" })
       .lean()
@@ -50,7 +50,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
       return res.render("error/404")
     }
 
-    res.render("stories/release", {
+    res.render("/release", {
       release,
     })
   } catch (err) {
