@@ -1,6 +1,6 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release/{{release._id}}" method="POST" class="col s12 getGone">
+  <form action="/release/{{release._id}}" method="POST" class="col s12">
 
 {{#if release}}
   
@@ -11,7 +11,7 @@
           <td><span class="dash-status">{{status}}</span></td>
          <ul>
           <li>
-            {{{release.body}}}
+            {{{body}}}
           </li>
          </ul>
         </tr>
