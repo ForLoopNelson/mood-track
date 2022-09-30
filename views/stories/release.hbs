@@ -1,33 +1,27 @@
 <h3 id="h3-center">Let It Go</h3>
  <div class="row">
-  <form action="/release/{{_id}}" method="POST" class="col s12">
-
-{{#if release}}
+  <form action="/release/{{_id}}" method="POST" class="col s12" value="{{release.body}}">
+<div class="row">
+  <div class="col s12 m8">
   
-      {{#each release}}
-        <tr>
-         
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-          <td><span class="dash-status">{{status}}</span></td>
-         <ul>
-          <li>
-            {{{release.body}}}
-          </li>
-         </ul>
-        </tr>
-      {{/each}}
-
-{{else}}
-  <p>You have not created any entries. Add one now!</p>
-{{/if}}
-
-<div id="insert"></div>
-
+    <div class="card story">
+      <div class="card-content">
+        <span class="card-title">{{formatDate
+            date
+            "MMMM Do YYYY, h:mm:ss a"
+          }}</span>
+        {{{release.body}}}
+      </div>
+    </div>
+  </div>
+ 
+  
+</div>
 
   <div class="row">
     <div class="input-field z-depth-1">
       <h5>Enter your thoughts you'd like to let go:</h5>
-      <textarea id="body" name="body" value="body" class="getGone"></textarea>
+      <textarea id="body" name="body" value="{{release.body}}" class="getGone"></textarea>
     </div>
   </div>
 
@@ -35,10 +29,5 @@
     <input type="submit" value="Release" class="btn" onclick="addText()" />
     <a href="/release" class="btn orange">Cancel</a>
   </div>
-    {{!-- <script>
-      function addText(){
-   var x = document.getElementById("body").value;
-  document.getElementById("insert").innerHTML = x;
-}
-  </script> --}}
+
 </form>
