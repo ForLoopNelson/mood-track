@@ -25,13 +25,13 @@ router.post("/postMoods", ensureAuth, async (req, res) => {
 
 //@desc Show all public stories
 //@Route GET /stories
-router.get("/postMoods/:id", ensureAuth, async (req, res) => {
+router.get("/moodChart/:id", ensureAuth, async (req, res) => {
   try {
     const moodChart = await Moods.findById(req.params.id)
       .populate("user")
       .sort({ createdAt: "desc" })
       .lean()
-    res.render("stories/moods", {
+    res.render("stories/showMoods", {
       moodChart,
     })
   } catch (err) {
@@ -50,7 +50,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
       return res.render("error/404")
     }
 
-    res.render("stories/moods", {
+    res.render("/moods", {
       moods,
     })
   } catch (err) {
