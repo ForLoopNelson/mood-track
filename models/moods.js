@@ -1,17 +1,14 @@
 const mongoose = require("mongoose")
 
 const MoodsSchema = new mongoose.Schema({
-  goodMood: {
-    type: Boolean,
-    required: false,
+  status: {
+    type: String,
+    default: "neutral",
+    enum: ["good", "neutral", "bad"],
   },
-  neutralMood: {
-    type: Boolean,
-    required: false,
-  },
-  badMood: {
-    type: Boolean,
-    required: false,
+  body: {
+    type: String,
+    required: true,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
