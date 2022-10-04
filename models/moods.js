@@ -14,7 +14,7 @@ const MoodsSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    //!Change: this field should be required because the app will break if the user is not present.
+
     required: true,
   },
   createdAt: {
