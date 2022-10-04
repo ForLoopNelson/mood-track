@@ -5,24 +5,30 @@
   <table class="striped">
     <thead>
       <tr>
-
         <th>Date</th>
         <th>Status</th>
+        {{! <th>Body</th> }}
         <th></th>
+
       </tr>
     </thead>
     <tbody>
       {{#each moods}}
         <tr>
-          <td><a href="/stories/{{_id}}">{{body}}</a></td>
+
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
+          {{!-- <td>{{body}}</td> --}}
           <td>
-            <a href="/stories/edit/{{_id}}" class="btn btn-float">
+            <a href="/moods/edit/{{_id}}" class="btn btn-float">
               <i class="fas fa-edit"></i>
             </a>
 
-            <form action="/stories/{{_id}}" method="POST" id="delete-form">
+            <form
+              action="/moods/showMoods{{_id}}"
+              method="POST"
+              id="delete-form"
+            >
               <input type="hidden" name="_method" value="DELETE" />
               <button type="submit" class="btn red">
                 <i class="fas fa-trash"></i>
@@ -36,3 +42,5 @@
 {{else}}
   <p>You have not created any entries. Add one now!</p>
 {{/if}}
+
+{{!-- <a href="/moods/showMoods{{_id}}"></a> --}}
