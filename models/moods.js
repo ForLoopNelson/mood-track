@@ -5,6 +5,7 @@ const MoodsSchema = new mongoose.Schema({
     type: String,
     default: "neutral",
     enum: ["good", "neutral", "bad"],
+    required: true,
   },
   body: {
     type: String,
