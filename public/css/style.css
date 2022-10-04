@@ -16,7 +16,7 @@ p {
 }
 
 #h3-center {
-  text-decoration: overline;
+  text-decoration: solid;
   display: flex;
   align-items: center;
   justify-content: center;
