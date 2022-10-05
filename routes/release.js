@@ -11,7 +11,7 @@ router.get("/", ensureAuth, (req, res) => {
 })
 
 //@desc Process add form
-//@Route POST /stories
+//@Route POST /release
 router.post("/postRelease", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
