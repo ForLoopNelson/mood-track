@@ -21,7 +21,7 @@
           <td><a href="/moods/{{_id}}">{{{body}}}</a></td>
           <td>
 
-            <form action="/showMoods{{_id}}" method="POST" id="delete-form">
+            <form action="/moods/{{_id}}" method="POST" id="delete-mood">
               <input type="hidden" name="_method" value="DELETE" />
               <button type="submit" class="btn red">
                 <i class="fas fa-trash"></i>
