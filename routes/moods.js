@@ -59,37 +59,12 @@ router.get("/:id", ensureAuth, async (req, res) => {
   }
 })
 
-//@desc Show edit page
-//@Route GET /stories/edit/:id
-// router.get("/edit/:id", ensureAuth, async (req, res) => {
-//   try {
-//     const mood = await Moods.findOne({
-//       _id: req.params.id,
-//     }).lean()
-
-//     if (!mood) {
-//       return res.render("error/404")
-//     }
-
-//     if (mood.user != req.user.id) {
-//       res.redirect("/moods")
-//     } else {
-//       res.render("moods/edit", {
-//         mood,
-//       })
-//     }
-//   } catch (err) {
-//     console.error(err)
-//     return res.render("error/500")
-//   }
-// })
-
 //@desc Delete story
 //@Route DELETE /stories/:id
 router.delete("/:id", ensureAuth, async (req, res) => {
   try {
-    await Moods.deleteOne({ _id: req.params.id })
-    res.redirect("/stories/showMoods")
+    await Moods.remove({ _id: req.params.id })
+    res.redirect(`/moods/showMoods/${req.user.id}`)
   } catch (err) {
     console.error(err)
     return res.render("error/500")
