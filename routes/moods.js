@@ -15,7 +15,7 @@ router.get("/", ensureAuth, (req, res) => {
 router.post("/postMoods", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
-    const moodChoice = await Moods.create(req.body)
+    await Moods.create(req.body)
     res.redirect(`/moods/showMoods/${req.user.id}`)
   } catch (err) {
     console.error(err)
@@ -88,8 +88,8 @@ router.get("/:id", ensureAuth, async (req, res) => {
 //@Route DELETE /stories/:id
 router.delete("/:id", ensureAuth, async (req, res) => {
   try {
-    await Moods.remove({ _id: req.params.id })
-    res.redirect("/moods/showMoods")
+    await Moods.deleteOne({ _id: req.params.id })
+    res.redirect("/stories/showMoods")
   } catch (err) {
     console.error(err)
     return res.render("error/500")
@@ -98,17 +98,17 @@ router.delete("/:id", ensureAuth, async (req, res) => {
 
 // @desc    User stories
 // @route   GET /stories/user/:userId
-router.get("/user/:userId", ensureAuth, async (req, res) => {
-  try {
-    const moods = await Moods.find({}).populate("user").lean()
+// router.get("/user/:userId", ensureAuth, async (req, res) => {
+//   try {
+//     const moods = await Moods.find({}).populate("user").lean()
 
-    res.render("moods/showMoods", {
-      moods,
-    })
-  } catch (err) {
-    console.error(err)
-    res.render("error/500")
-  }
-})
+//     res.render("stories/moodIndex", {
+//       moods,
+//     })
+//   } catch (err) {
+//     console.error(err)
+//     res.render("error/500")
+//   }
+// })
 
 module.exports = router
