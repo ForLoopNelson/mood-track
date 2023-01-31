@@ -10,10 +10,10 @@
 
     <div class="row">
       <div class="input-field">
-        <select id="status" name="status">
-          <option value="neutral" selected>Neutral</option>
-          <option value="good">Good</option>
-          <option value="bad">Bad</option>
+        <select id="status" name="status" onclick="colorMood()">
+          <option id="yellow" value="neutral" selected>Neutral</option>
+          <option id="green" value="good">Good</option>
+          <option id="red" value="bad">Bad</option>
         </select>
         <label for="status">Current Mood</label>
       </div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="row">
-      <input type="submit" value="Save" class="btn" />
+      <input type="submit" value="Save" class="btn" onclick="colorMood()" />
       <a href="/showMoods" class="btn orange">Cancel</a>
     </div>
   </form>

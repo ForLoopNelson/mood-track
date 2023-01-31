@@ -2,7 +2,7 @@
 
 <p>A look back at your previous Moods: </p>
 {{#if moods}}
-  <table class="striped">
+  <table class="striped" id="moodTable">
     <thead>
       <tr>
         <th>Date</th>
@@ -14,11 +14,11 @@
     </thead>
     <tbody>
       {{#each moods}}
-        <tr>
+        <tr id="mood-colors">
 
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status {{status.color}}">{{status}}</span></td>
-          <td><a href="/moods/{{_id}}">{{{body}}}</a></td>
+          <td>{{{body}}}</td>
           <td>
 
             <form action="/moods/{{_id}}" method="POST" id="delete-mood">

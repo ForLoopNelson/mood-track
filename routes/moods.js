@@ -4,6 +4,37 @@ const { ensureAuth } = require("../middleware/auth")
 
 const Moods = require("../models/Moods")
 
+//color function
+// function moodColors() {
+//   let neutral = document.getElementById("yellow").value
+//   let good = document.getElementById("green").value
+//   let bad = document.getElementById("red").value
+//   let color = document.getElementById("mood-colors").getElementsByTagName("tr")
+
+//   if (neutral === "neutral") {
+//     return (color.style.bgColor = "#FFFF00")
+//   } else if (good === "good") {
+//     return (color.style.bgColor = "#03C03C")
+//   } else {
+//     return (color.style.bgColor = "#FF0000")
+//   }
+// }
+// moodColors()
+function colorMood() {
+  let yellow = document.getElementId("yellow").value
+  let green = document.getElementId("green").value
+  let red = document.getElementId("red").value
+  let color = document.getElementById("mood-colors")
+
+  if (yellow === "neutral") {
+    color.style.backgroundColor = "#FFFF00"
+  } else if (green === "good") {
+    color.style.backgroundColor = "#03C03C"
+  } else {
+    color.style.backgroundColor = "#FF0000"
+  }
+}
+colorMood()
 //@desc Showw add page
 //@Route GET /stories/add
 router.get("/", ensureAuth, (req, res) => {
