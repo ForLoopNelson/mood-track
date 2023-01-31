@@ -6,7 +6,8 @@
     <thead>
       <tr>
         <th>Title</th>
-        <th>Date</th>
+        <th>Date Created</th>
+        <th>Date Updated</th>
         <th>Status</th>
         <th></th>
       </tr>
@@ -17,6 +18,7 @@
         <tr>
           <td><a href="/stories/{{_id}}">{{title}}</a></td>
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+          <td>{{formatDate updatedAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td>
             <a href="/stories/edit/{{_id}}" class="btn btn-float">

@@ -63,7 +63,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
 //@Route GET /stories/edit/:id
 router.get("/edit/:id", ensureAuth, async (req, res) => {
   try {
-    const story = await Story.findOneAndUpdate({
+    const story = await Story.findOne({
       _id: req.params.id,
     }).lean()
 
