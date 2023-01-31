@@ -22,3 +22,18 @@ p {
   justify-content: center;
   padding-bottom: 1em;
 }
+
+#yellow {
+  background-color: yellow;
+  color: white;
+}
+
+#green {
+  background: green;
+  color: white;
+}
+
+#red {
+  background: red;
+  color: black;
+}
