@@ -20,21 +20,7 @@ const Moods = require("../models/Moods")
 //   }
 // }
 // moodColors()
-function colorMood() {
-  let yellow = document.getElementId("yellow").value
-  let green = document.getElementId("green").value
-  let red = document.getElementId("red").value
-  let color = document.getElementById("mood-colors")
 
-  if (yellow === "neutral") {
-    color.style.backgroundColor = "#FFFF00"
-  } else if (green === "good") {
-    color.style.backgroundColor = "#03C03C"
-  } else {
-    color.style.backgroundColor = "#FF0000"
-  }
-}
-colorMood()
 //@desc Showw add page
 //@Route GET /stories/add
 router.get("/", ensureAuth, (req, res) => {
