@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { ensureAuth } = require("../middleware/auth")
 
-const Moods = require("../models/Moods")
+const Moods = require("../models/moods")
 
 //color function
 // function moodColors() {
