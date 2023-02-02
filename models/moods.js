@@ -9,7 +9,7 @@ const MoodsSchema = new mongoose.Schema({
   },
   body: {
     type: String,
-    required: true,
+    required: false,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
