@@ -4,23 +4,6 @@ const { ensureAuth } = require("../middleware/auth")
 
 const Moods = require("../models/moods")
 
-//color function
-// function moodColors() {
-//   let neutral = document.getElementById("yellow").value
-//   let good = document.getElementById("green").value
-//   let bad = document.getElementById("red").value
-//   let color = document.getElementById("mood-colors").getElementsByTagName("tr")
-
-//   if (neutral === "neutral") {
-//     return (color.style.bgColor = "#FFFF00")
-//   } else if (good === "good") {
-//     return (color.style.bgColor = "#03C03C")
-//   } else {
-//     return (color.style.bgColor = "#FF0000")
-//   }
-// }
-// moodColors()
-
 //@desc Showw add page
 //@Route GET /stories/add
 router.get("/", ensureAuth, (req, res) => {
@@ -33,7 +16,7 @@ router.post("/postMoods", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
     await Moods.create(req.body)
-    res.redirect(`/moods/showMoods/${req.user.id}`)
+    res.redirect(`/moods/showMoods/`)
   } catch (err) {
     console.error(err)
     res.render("error/500")
