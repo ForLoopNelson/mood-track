@@ -16,7 +16,7 @@ router.post("/postMoods", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
     await Moods.create(req.body)
-    res.redirect(`/moods/showMoods/`)
+    res.redirect(`/moods/showMoods/${req.user.id}`)
   } catch (err) {
     console.error(err)
     res.render("error/500")
