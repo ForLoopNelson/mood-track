@@ -1,59 +1,7 @@
-{{!-- <h1>Full View Moods</h1>
-<div class="row">
-    {{#each moods}}
-        <div class="col s12 m4 z-depth-2">
-            <div class="card">
-                <div class="card-image">
-                   {{{editIcon user ../user _id}}} 
-                </div>
-                <div class="card-content center-align"><h5>{{title}}</h5>
-                <p>{{stripTags (truncate body 150)}}</p>
-                <br>
-                <div class="chip">
-                    <img src="{{user.image}}" alt="">
-                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
-                </div>
-                </div>
-                <div class="card-action center-align">
-                    <a href="/showMoods/{{_id}}" class="btn grey">Read More</a>
-                </div>
-            </div>
-        </div>
-    {{else}}
-        <p>Looks like you haven't added any moods!</p>
-    {{/each}}
-</div> --}}
-
-
-
-
-   
-
 <h1>Mood View</h1>
-<div class="row">
-  <form action="/showMoods" method="GET" class="col s12">
-    <div class="row">
-      {{! <div class="input-field">
-        <input type="text" id="title" name="title" />
-        <label for="title">Title</label>
-      </div> }}
-    </div>
-
-   
-        <label for="status">Click to View</label>
-      </div>
-    </div>
-     <div class="row">
-      <input type="submit" value="View" class="btn" onclick="colorMood()" />
-      <a href="/showMoods" class="btn orange">Cancel</a>
-    </div>
-  </form>
-</div>
-
-
 <p>A look back at your previous Moods: </p>
 {{#if moods}}
-  <table class="striped" id="moodTable">
+  <table class="striped">
     <thead>
       <tr>
         <th>Date</th>
@@ -65,7 +13,7 @@
     </thead>
     <tbody>
       {{#each moods}}
-        <tr id="mood-colors">
+        <tr>
 
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status {{status.color}}">{{status}}</span></td>
