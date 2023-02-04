@@ -1,6 +1,17 @@
-<h1>Mood View</h1>
+<h1>Click the Button to See Your Previous Mood Entries</h1>
+<div class="row">
+  <form action="/moods/postMoods" method="POST" class="col s12">
+    <div class="row">
+
+    </div>
+    <div class="row">
+      <input type="submit" value="View" class="btn" />
+      <a href="/dashboard" class="btn orange">Dashboard</a>
+    </div>
+  </form>
+</div>
 <p>A look back at your previous Moods: </p>
-{{#if moods}}
+{{!-- {{#if moods}}
   <table class="striped">
     <thead>
       <tr>
@@ -33,6 +44,6 @@
   </table>
 {{else}}
   <p>You have not created any entries. Add one now!</p>
-{{/if}}
+{{/if}} --}}
 
 {{!-- <a href="/moods/showMoods{{_id}}"></a> --}}
