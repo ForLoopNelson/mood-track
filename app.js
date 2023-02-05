@@ -9,9 +9,6 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const connectDB = require("./config/db")
 
-//test for deploy
-const router = express.Router()
-
 // Load config
 dotenv.config({ path: "./config/config.env" })
 
@@ -111,5 +108,3 @@ app.listen(
     `Server is running on ${process.env.NODE_ENV} mode on PORT ${PORT}`
   )
 )
-
-module.exports = router
