@@ -111,3 +111,5 @@ app.listen(
     `Server is running on ${process.env.NODE_ENV} mode on PORT ${PORT}`
   )
 )
+
+module.exports = router
