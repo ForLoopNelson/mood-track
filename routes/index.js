@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { ensureAuth, ensureGuest } = require("../middleware/auth")
 
-const Story = require("../models/Story")
+const Story = require("../models/story")
 
 //Login/Landing Page
 router.get("/", ensureGuest, (req, res) => {
