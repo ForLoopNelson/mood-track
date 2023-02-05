@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { ensureAuth } = require("../middleware/auth")
 
-const Release = require("../models/Release")
+const Release = require("../models/release")
 
 //@desc Showw add page
 //@Route GET /stories/add
