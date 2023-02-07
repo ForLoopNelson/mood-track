@@ -63,7 +63,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
 //@Route DELETE /stories/:id
 router.delete("/:id", ensureAuth, async (req, res) => {
   try {
-    await Moods.remove({ _id: req.params.id })
+    await Moods.deleteOne({ _id: req.params.id })
     res.redirect(`/moods/showMoods/${req.user.id}`)
   } catch (err) {
     console.error(err)
