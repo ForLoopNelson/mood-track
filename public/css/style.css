@@ -37,3 +37,27 @@ p {
   background: red;
   color: black;
 }
+
+@media screen and (max-width: 840px) {
+  nav .brand-logo {
+    max-width: 800px;
+    position: relative;
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 668px) {
+  nav .brand-logo {
+    max-width: 800px;
+    position: relative;
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 595px) {
+  nav .brand-logo {
+    max-width: 800px;
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding-right: 5.3rem;
+  }
+}
