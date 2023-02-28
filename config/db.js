@@ -1,5 +1,8 @@
 const mongoose = require("mongoose")
 
+//test for deprecated warning
+mongoose.set("strictQuery", true)
+
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI)
