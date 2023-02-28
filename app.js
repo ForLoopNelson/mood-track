@@ -98,12 +98,14 @@ app.use("/moods", require("./routes/moods"))
 app.use("/showMoods", require("./routes/moods"))
 app.use("/moodIndex", require("./routes/moodIndex"))
 
-const PORT = process.env.PORT || 8500
+const PORT = process.env.PORT || 3000
 connectDB().then(() => {
   app.listen(
     PORT,
     console.log(
       `Server is running on ${process.env.NODE_ENV} mode on PORT ${PORT}`
-    )
+    ),
+    //test for Cyclic Deploy
+    console.log(`${process.env.MONGO_URI}`)
   )
 })
