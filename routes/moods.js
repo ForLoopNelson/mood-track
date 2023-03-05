@@ -25,9 +25,11 @@ router.post("/postMoods", ensureAuth, async (req, res) => {
 
 //@desc Show all public stories
 //@Route GET /stories
+
 router.get("/showMoods/:id", ensureAuth, async (req, res) => {
   try {
-    const moods = await Moods.find({})
+    req.body.user = req.user.id
+    const moods = await Moods.find({ user: req.user.id })
       .populate("user")
       .sort({ createdAt: "desc" })
       .lean()
