@@ -5,6 +5,8 @@
   <table class="striped" id="moodTable">
     <thead>
       <tr>
+        <th>User</th>
+        <th></th>
         <th>Date</th>
         <th>Status</th>
         <th>Body</th>
@@ -15,7 +17,9 @@
     <tbody>
       {{#each moods}}
         <tr id="mood-colors">
-
+          <td>
+            <img src="{{user.image}}" alt="" width="30px" height="30px" /></td>
+          <td></td>
           <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
           <td><span class="dash-status {{status.color}}">{{status}}</span></td>
           <td>{{{body}}}</td>
