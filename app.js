@@ -45,6 +45,7 @@ const {
   truncate,
   editIcon,
   select,
+  colorClass,
 } = require("./helpers/hbs")
 
 // HandleBars
@@ -58,6 +59,7 @@ app.engine(
       truncate,
       editIcon,
       select,
+      colorClass,
     },
     defaultLayout: "main",
     extname: ".hbs",
