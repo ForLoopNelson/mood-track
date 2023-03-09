@@ -40,4 +40,29 @@ module.exports = {
         ' selected="selected"$&'
       )
   },
+
+  // Mood Color helper
+  colorClass: function (colorValue) {
+    let className = ""
+    switch (colorValue) {
+      case "neutral":
+        className = "blue lighten-4"
+        break
+      case "good":
+        className = "green lighten-2"
+        break
+      case "bad":
+        className = "red lighten-2"
+        break
+      default:
+        // Check if the colorValue is a valid hex color value
+        if (/^#[0-9A-F]{6}$/i.test(colorValue)) {
+          className = colorValue
+        } else {
+          className = "rgba(245,242,242,0.5)"
+        }
+        break
+    }
+    return className
+  },
 }
