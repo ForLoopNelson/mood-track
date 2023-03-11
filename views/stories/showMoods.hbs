@@ -2,10 +2,10 @@
 
 <p>A look back at your previous Moods: </p>
 {{#if moods}}
-  <table class="striped" id="moodTable">
+  <table class="striped">
     <thead>
       <tr>
-        <th>User</th>
+
         <th></th>
         <th>Date Added</th>
         <th>Mood</th>
@@ -18,12 +18,16 @@
       {{#each moods}}
 
         <tr class="{{colorClass status}} mood-border">
-          <td>
-            <img src="{{user.image}}" alt="" width="30px" height="30px" /></td>
+
           <td></td>
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-          <td><span class="dash-status {{status.color}}">{{status}}</span></td>
-          <td>{{{body}}}</td>
+          <td class="side-border">{{formatDate
+              createdAt
+              "MMMM Do YYYY, h:mm:ss a"
+            }}</td>
+          <td class="side-border"><span
+              class="dash-status {{status.color}}"
+            >{{status}}</span></td>
+          <td class="body-space">{{{body}}}</td>
           <td>
 
             <form action="/moods/{{_id}}" method="POST" id="delete-mood">
