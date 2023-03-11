@@ -7,15 +7,6 @@ const MoodsSchema = new mongoose.Schema({
     enum: ["good", "neutral", "bad"],
     required: true,
   },
-  colors: {
-    color: {
-      type: String,
-      enum: ["neutral", "good", "bad", "#8DBAFF", "#50E45E", "#F10808"],
-      // neutral: "#8DBAFF",
-      // good: "#50E45E",
-      // bad: "#F10808",}
-    },
-  },
 
   body: {
     type: String,
