@@ -1,6 +1,23 @@
-<div class="fixed-action-btn">
-  <a
-    href="/stories/add"
-    class="btn-floating btn-large waves-effect waves-light red"
-  ><i class="fas fa-plus"></i></a>
+<div class="fixed-action-btn click-to-toggle">
+  <a class="btn-floating btn-large red btn-large waves-effect waves-light red">
+    <i class="fas fa-plus"></i>
+  </a>
+  <ul>
+    <li><a href="/stories/add" class="btn-floating green btn-large"><i
+          class="material-icons"
+          style="font-size: 9px;"
+        >Add Story</i></a></li>
+
+    <li><a href="/moods/" class="btn-floating blue btn-large"><i
+          class="material-icons"
+          style="font-size: 9px;"
+        >Add Mood</i></a></li>
+  </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() { var elems =
+    document.querySelectorAll('.fixed-action-btn'); var instances =
+    M.FloatingActionButton.init(elems, { direction: 'left', hoverEnabled: false
+    }); });
+  </script>
 </div>
