@@ -14,6 +14,12 @@ p {
 .img-small {
   width: 180px;
 }
+.img-login {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 15%;
+  margin: 0;
+}
 
 /* mood color attempt */
 
@@ -59,5 +65,13 @@ p {
     font-size: 1.1em;
     font-weight: 400;
     padding-right: 5.3rem;
+  }
+
+  .img-login {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 35%;
+    margin: 0;
+    padding: 15px 0 0 10px;
   }
 }
