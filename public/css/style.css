@@ -38,21 +38,6 @@ p {
   padding-bottom: 1em;
 }
 
-#yellow {
-  background-color: yellow;
-  color: white;
-}
-
-#green {
-  background: green;
-  color: white;
-}
-
-#red {
-  background: red;
-  color: black;
-}
-
 @media screen and (max-width: 840px) {
   nav .brand-logo {
     max-width: 800px;
