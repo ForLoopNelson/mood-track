@@ -15,10 +15,14 @@ p {
   width: 180px;
 }
 .img-login {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 15%;
-  margin: 0;
+  display: block;
+  width: 30%;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#title-page {
+  font-size: 4rem;
 }
 
 /* mood color attempt */
@@ -70,8 +74,13 @@ p {
   .img-login {
     display: flex;
     flex-wrap: nowrap;
-    width: 35%;
+    width: 49%;
     margin: 0;
-    padding: 15px 0 0 10px;
+    padding: 1px 0 0 13px;
+  }
+
+  #title-page {
+    font-size: 1.7rem;
+    padding: 10px 0 0 0;
   }
 }
