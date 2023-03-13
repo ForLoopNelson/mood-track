@@ -25,6 +25,12 @@ p {
   font-size: 4rem;
 }
 
+#menu-img {
+  width: 7rem;
+  display: block;
+  margin-left: 16px;
+}
+
 /* mood color attempt */
 
 .mood-border {
