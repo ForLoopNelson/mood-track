@@ -1,7 +1,6 @@
 const express = require("express")
 const router = express.Router()
 const { ensureAuth } = require("../middleware/auth")
-
 const Moods = require("../models/moods")
 
 //@desc Showw add page
