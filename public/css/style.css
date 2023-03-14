@@ -37,13 +37,14 @@ p {
 }
 
 .side-border {
-  border-right: 1px solid black;
+  clip-path: circle(40%);
 }
 
 .body-space {
   padding-left: 20px;
 }
 
+/* release title */
 #h3-center {
   text-decoration: solid;
   display: flex;
