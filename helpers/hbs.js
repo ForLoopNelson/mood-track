@@ -46,13 +46,13 @@ module.exports = {
     let className = ""
     switch (colorValue) {
       case "neutral":
-        className = "blue lighten-1"
+        className = "blue lighten-2"
         break
       case "good":
-        className = "green lighten-1"
+        className = "yellow lighten-2"
         break
       case "bad":
-        className = "red"
+        className = "red lighten-1"
         break
       default:
         // Check if the colorValue is a valid hex color value
