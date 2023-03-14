@@ -16,9 +16,7 @@ p {
 }
 .img-login {
   display: block;
-  width: 30%;
-  margin-left: 0;
-  margin-right: auto;
+  width: 24%;
 }
 
 #title-page {
@@ -81,8 +79,9 @@ p {
     display: flex;
     flex-wrap: nowrap;
     width: 49%;
-    margin: 0;
-    padding: 1px 0 0 13px;
+    height: 12em;
+
+    padding-right: 14px;
   }
 
   #title-page {
