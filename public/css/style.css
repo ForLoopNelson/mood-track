@@ -44,13 +44,20 @@ p {
   padding-left: 20px;
 }
 
-/* release title */
+/* release title and image*/
 #h3-center {
   text-decoration: solid;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 1em;
+}
+
+#release-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 @media screen and (max-width: 840px) {
