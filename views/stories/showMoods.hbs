@@ -17,15 +17,15 @@
     <tbody>
       {{#each moods}}
 
-        <tr class="{{colorClass status}} mood-border">
+        <tr  "mood-border">
 
           <td></td>
-          <td class="side-border">{{formatDate
+          <td >{{formatDate
               createdAt
               "MMMM Do YYYY, h:mm:ss a"
             }}</td>
-          <td class="side-border"><span
-              class="dash-status {{status.color}}"
+          <td class="side-border {{colorClass status}}"><span 
+              class="dash-status"
             >{{status}}</span></td>
           <td class="body-space">{{{body}}}</td>
           <td>
