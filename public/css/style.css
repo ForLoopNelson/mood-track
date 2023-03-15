@@ -30,13 +30,24 @@ p {
 }
 
 /* mood color attempt */
+.dash-status {
+  padding-left: 15px;
+}
 
 .side-border {
-  clip-path: circle(40%);
+  clip-path: circle(34%);
 }
 
 .body-space {
-  padding-left: 20px;
+  padding-left: 40px;
+}
+
+.pad-me-banana {
+  padding-right: 50px;
+}
+
+.fixed-width {
+  width: 80px;
 }
 
 /* release title and image*/
@@ -97,5 +108,9 @@ p {
 
   .side-border {
     clip-path: circle(25%);
+  }
+
+  .dash-status {
+    padding-right: 9px;
   }
 }

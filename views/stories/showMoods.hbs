@@ -9,7 +9,7 @@
         <th></th>
         <th>Date Added</th>
         <th>Mood</th>
-        <th>Details of current mood</th>
+        <th class="body-space">Details of current mood</th>
         <th></th>
 
       </tr>
@@ -20,12 +20,16 @@
         <tr>
 
           <td></td>
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-          <td class="side-border {{colorClass status}}"><span
+          <td class="fixed-width pad-me-banana">{{formatDate
+              createdAt
+              "MMMM Do YYYY, h:mm:ss a"
+            }}</td>
+
+          <td class="side-border {{colorClass status}} fixed-width"><span
               class="dash-status"
             >{{status}}</span></td>
           <td class="body-space">{{{body}}}</td>
-          <td>
+          <td class="fixed-width">
 
             <form action="/moods/{{_id}}" method="POST" id="delete-mood">
               <input type="hidden" name="_method" value="DELETE" />
