@@ -31,11 +31,6 @@ p {
 
 /* mood color attempt */
 
-.mood-border {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
 .side-border {
   clip-path: circle(40%);
 }
@@ -66,6 +61,9 @@ p {
     position: relative;
     font-size: 2em;
   }
+  .side-border {
+    clip-path: circle(36%);
+  }
 }
 @media screen and (max-width: 668px) {
   nav .brand-logo {
@@ -95,5 +93,9 @@ p {
   #title-page {
     font-size: 1.7rem;
     padding: 10px 0 0 0;
+  }
+
+  .side-border {
+    clip-path: circle(25%);
   }
 }
