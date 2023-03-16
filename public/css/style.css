@@ -77,15 +77,15 @@ p {
   }
 
   .dropdown-content li > span {
-    font-size: 20px;
+    font-size: 15px;
     margin-left: 29px;
-    padding: 40px 0;
+    padding: 10px 0;
   }
 
-  .dropdown-content,
-  .select-dropdown,
-  .select-wrapper {
-    transform: none;
+  .select-wrapper * {
+    transition: none !important;
+    transform: none !important;
+    animation: none;
   }
 }
 
@@ -125,9 +125,5 @@ p {
 
   .dash-status {
     padding-right: 9px;
-  }
-
-  .dropdown-content li > span {
-    padding: 5px 0;
   }
 }
