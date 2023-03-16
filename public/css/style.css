@@ -66,11 +66,11 @@ p {
   width: 70%;
 }
 
-@media screen and (min-width: 840px) {
+/* @media screen and (min-width: 840px) {
   .hide-on-med-and-up {
     display: none;
   }
-}
+} */
 
 @media screen and (max-width: 840px) {
   nav .brand-logo {
@@ -96,11 +96,6 @@ p {
   .hide-on-mobile {
     display: none;
   } */
-}
-@media (hover: none) {
-  li:hover {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 668px) {
