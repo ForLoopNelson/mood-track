@@ -1,33 +1,9 @@
 <h1>Track How You're Feeling</h1>
 <div class="row">
   <form action="/moods/postMoods" method="POST" class="col s12">
-    <div class="row">
-      {{! <div class="input-field">
-        <input type="text" id="title" name="title" />
-        <label for="title">Title</label>
-      </div> }}
-    </div>
 
     <div class="row">
-      {{! radio }}
-      <!-- Radio buttons visible only on smaller screens -->
-      {{! <div class="input-field hide-on-med-and-up">
-        <p>What is your current mood?</p>
-        <label>
-          <input type="radio" name="status" value="neutral" checked />
-          <span>Neutral</span>
-        </label>
-        <label>
-          <input type="radio" name="status" value="good" />
-          <span>Good</span>
-        </label>
-        <label>
-          <input type="radio" name="status" value="bad" />
-          <span>Bad</span>
-        </label>
-      </div> }}
 
-      {{! radio end }}
       <div class="input-field hide-on-mobile">
         <select id="status" name="status" type="select" class="hide-on-mobile">
 
