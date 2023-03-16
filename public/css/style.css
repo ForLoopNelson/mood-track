@@ -75,6 +75,12 @@ p {
   .side-border {
     clip-path: circle(36%);
   }
+
+  .dropdown-content li > span {
+    height: auto;
+    font-size: 18px;
+    margin: 29px 0;
+  }
 }
 @media screen and (max-width: 668px) {
   nav .brand-logo {
