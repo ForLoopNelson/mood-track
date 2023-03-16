@@ -66,6 +66,12 @@ p {
   width: 70%;
 }
 
+@media screen and (min-width: 840px) {
+  .hide-on-med-and-up {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 840px) {
   nav .brand-logo {
     max-width: 800px;
@@ -78,11 +84,25 @@ p {
 
   .dropdown-content li > span {
     height: auto;
-    font-size: 40px;
-    margin: 29px 0 0 28px;
+    font-size: 30px;
+    margin-left: 29px;
     padding: 60px 0;
   }
+
+  /* .hide-on-med-and-up {
+    display: flex;
+    position: relative;
+  }
+  .hide-on-mobile {
+    display: none;
+  } */
 }
+@media (hover: none) {
+  li:hover {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 668px) {
   nav .brand-logo {
     max-width: 800px;
@@ -119,5 +139,9 @@ p {
 
   .dash-status {
     padding-right: 9px;
+  }
+
+  .dropdown-content li > span {
+    padding: 40px 0;
   }
 }

@@ -35,5 +35,23 @@
             plugins: 'wysiwygarea, toolbar, basicstyles, link'
         })
     </script>
+<script>
+   document.addEventListener('click', function() {
+  document.querySelectorAll('li[id^="select-options"]').forEach(function(option) {
+    option.addEventListener('touchend', function(e) {
+      e.stopPropagation();
+    });
+  });
+});
+</script>
+
+<script>
+    document.querySelectorAll('li[id^="select-options"]').forEach(function(option) {
+  option.addEventListener('touchend', function(e) {
+    e.stopPropagation();
+  });
+});
+</script>
+
 </body>
 </html>

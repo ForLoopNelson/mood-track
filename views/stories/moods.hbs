@@ -9,9 +9,29 @@
     </div>
 
     <div class="row">
-      <div class="input-field">
-        <select id="status" name="status">
-          <option value="neutral" selected>Neutral</option>
+      {{! radio }}
+      <!-- Radio buttons visible only on smaller screens -->
+      {{! <div class="input-field hide-on-med-and-up">
+        <p>What is your current mood?</p>
+        <label>
+          <input type="radio" name="status" value="neutral" checked />
+          <span>Neutral</span>
+        </label>
+        <label>
+          <input type="radio" name="status" value="good" />
+          <span>Good</span>
+        </label>
+        <label>
+          <input type="radio" name="status" value="bad" />
+          <span>Bad</span>
+        </label>
+      </div> }}
+
+      {{! radio end }}
+      <div class="input-field hide-on-mobile">
+        <select id="status" name="status" type="select" class="hide-on-mobile">
+          <option value="" disabled selected>What is your current mood</option>
+          <option value="neutral">Neutral</option>
           <option value="good">Good</option>
           <option value="bad">Bad</option>
         </select>
