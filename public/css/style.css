@@ -78,8 +78,9 @@ p {
 
   .dropdown-content li > span {
     height: auto;
-    font-size: 18px;
-    margin: 29px 0;
+    font-size: 40px;
+    margin: 29px 0 0 28px;
+    padding: 60px 0;
   }
 }
 @media screen and (max-width: 668px) {
