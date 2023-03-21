@@ -20,6 +20,12 @@
     M.FloatingActionButton.init(elems, { direction: 'left', hoverEnabled: false
     }); });
   </script>
+
+  <script>const button = document.querySelector('.click-to-toggle') 
+          const icon = button.querySelector('i'); button.addEventListener('click', () => {
+          icon.classList.toggle('fa-plus'); icon.classList.toggle('fa-x');
+          icon.classList.toggle('rotate'); });
+  </script>
 </div>
 
 {{! Old way }}
