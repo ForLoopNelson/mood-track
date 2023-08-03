@@ -6,8 +6,9 @@ A CRUD app for tracking your mood, login with a Gmail account. Create Public and
 TODO:
 --Make the Title text a tad bigger when on Mobile. Tablet looks ok
 
---Create the mood track page. Have 3 colors for the moods the user can choose and display in a grid format.
-
 --Add weather widget to dashboard to show the user their local weather.
 
---styling. Make it look not so....plain
+-- fix animation on letting go text. It goes to fast on mobile devices
+
+-- setup another login way using email
+
