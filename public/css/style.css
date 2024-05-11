@@ -124,10 +124,14 @@ p {
   }
 
   .side-border {
-    clip-path: circle(25%);
+    clip-path: circle(26%);
+   
   }
 
   .dash-status {
-    padding-right: 9px;
+    padding-right: 5px;
   }
+
+  
+ 
 }
