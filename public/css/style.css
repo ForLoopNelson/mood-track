@@ -34,7 +34,24 @@ p {
 }
 
 /* mood color attempt */
+.color-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
+.color-good {
+  clip-path: circle(40%);
+  background: #fff176;
+}
+.color-bad {
+  clip-path: circle(40%);
+  background: #ef5350;
+}
+.color-neutral {
+  clip-path: circle(40%);
+  background: #64b5f6;
+}
 
 .dash-status {
   padding-left: 15px;
