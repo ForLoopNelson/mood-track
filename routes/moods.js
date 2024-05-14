@@ -10,7 +10,7 @@ router.get("/", ensureAuth, (req, res) => {
 })
 
 //@desc Process add form
-//@Route POST /stories
+//@Route POST 
 router.post("/postMoods", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
@@ -22,9 +22,8 @@ router.post("/postMoods", ensureAuth, async (req, res) => {
   }
 })
 
-//@desc Show all public stories
-//@Route GET /stories
 
+//@desc Show all moods
 router.get("/showMoods/:id", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id
@@ -41,8 +40,26 @@ router.get("/showMoods/:id", ensureAuth, async (req, res) => {
   }
 })
 
-//@desc Show single story
-//@Route GET /stories/:id
+
+// For looking back section to view past moods. Not to post
+router.get("/showMoods/", ensureAuth, async (req, res) => {
+  try {
+    req.body.user = req.user.id
+    const moods = await Moods.find({ user: req.user.id })
+      .populate("user")
+      .sort({ createdAt: "desc" })
+      .lean()
+    res.render("stories/showMoods", {
+      moods,
+    })
+  } catch (err) {
+    console.error(err)
+    res.render("error/500")
+  }
+})
+
+
+// Is this route needed?
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
     let moods = await Moods.findById(req.params.id).populate("user").lean()
@@ -72,19 +89,5 @@ router.delete("/:id", ensureAuth, async (req, res) => {
   }
 })
 
-// @desc    User stories
-// @route   GET /stories/user/:userId
-// router.get("/user/:userId", ensureAuth, async (req, res) => {
-//   try {
-//     const moods = await Moods.find({}).populate("user").lean()
-
-//     res.render("stories/moodIndex", {
-//       moods,
-//     })
-//   } catch (err) {
-//     console.error(err)
-//     res.render("error/500")
-//   }
-// })
 
 module.exports = router
