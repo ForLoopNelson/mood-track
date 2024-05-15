@@ -6,6 +6,8 @@ A CRUD app for tracking your mood, login with a Gmail account. Create Public and
 TODO:
 --Make the Title text a tad bigger when on Mobile. Tablet looks ok
 
+--Get rid of unused JS files
+
 --Add weather widget to dashboard to show the user their local weather.
 
 -- fix animation on letting go text. It goes to fast on mobile devices
