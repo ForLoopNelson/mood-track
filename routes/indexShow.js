@@ -10,7 +10,7 @@ router.get("/", ensureGuest, (req, res) => {
     layout: "login",
   })
 })
-
+// Test file to get user to be able to show one Mood like you can with Public Stories
 //Dashboard
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
