@@ -98,7 +98,7 @@ app.use("/stories", require("./routes/stories"))
 app.use("/release", require("./routes/release"))
 app.use("/moods", require("./routes/moods"))
 app.use("/showMoods", require("./routes/moods"))
-app.use("/moodIndex", require("./routes/moodIndex"))
+
 
 const PORT = process.env.PORT || 3000
 connectDB().then(() => {
