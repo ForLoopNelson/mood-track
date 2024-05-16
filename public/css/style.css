@@ -33,6 +33,10 @@ p {
   margin-left: 16px;
 }
 
+.lead {
+  font-size: 20px;
+}
+
 /* mood color attempt */
 .color-container {
   display: flex;
@@ -98,6 +102,11 @@ p {
   .side-border {
     clip-path: circle(36%);
   }
+  .lead {
+    font-size: 16px;
+  }
+
+  
 
   .dropdown-content li > span {
     font-size: 15px;
@@ -126,6 +135,10 @@ p {
     font-size: 1.1em;
     font-weight: 400;
     padding-right: 5.3rem;
+  }
+
+  .lead {
+    font-size: 14px;
   }
 
   .img-login {
