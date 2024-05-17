@@ -1,6 +1,6 @@
 <h6>DASHBOARD</h6>
 <h3>Welcome {{name}}</h3>
-<p>Here are your personal entries:</p>
+<p id="welcome">Here are your personal entries:</p>
 {{#if stories}}
   <table class="striped">
     <thead>
@@ -17,8 +17,8 @@
       {{#each stories}}
         <tr>
           <td><a href="/stories/{{_id}}">{{title}}</a></td>
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-          <td>{{formatDate updatedAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm a"}}</td>
+          <td>{{formatDate updatedAt "MMMM Do YYYY, h:mm a"}}</td>
           <td><span class="dash-status">{{status}}</span></td>
           <td>
             <a href="/stories/edit/{{_id}}" class="btn btn-float">
