@@ -33,9 +33,14 @@ p {
   margin-left: 16px;
 }
 
+#welcome {
+  font-size: 17px;
+}
+
 .lead {
   font-size: 20px;
 }
+
 
 /* mood color attempt */
 .color-container {
