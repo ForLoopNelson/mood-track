@@ -14,3 +14,12 @@ TODO:
 
 -- setup another login way using email
 
+--!!!! FIX Time for created at and updated at are wrong in the app and on the DB suggested fix to try later below:
+<!-- 
+const yourSchema = new mongoose.Schema({
+  // other fields...
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now }
+});
+ -->
+
