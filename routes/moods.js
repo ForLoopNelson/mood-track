@@ -77,6 +77,45 @@ router.get("/:id", ensureAuth, async (req, res) => {
   }
 })
 
+
+// show single mood like the public stories *****TEST
+router.get("/moodIndex/:id", ensureAuth, async (req, res) => {
+  try {
+    let mood = await Moods.findById(req.params.id).populate("user").lean();
+
+    if (!mood) {
+      return res.render("error/404");
+    }
+
+    res.render("moods/moodIndex", {
+      mood,
+    });
+  } catch (err) {
+    console.error(err);
+    res.render("error/404");
+  }
+});
+
+// Route to show a single mood at moodIndex
+//@desc Show single mood at moodIndex
+//@Route GET /moods/moodIndex/:id
+// router.get("/moodIndex/:id", ensureAuth, async (req, res) => {
+//   try {
+//     let mood = await Moods.findById(req.params.id).populate("user").lean();
+
+//     if (!mood) {
+//       return res.render("error/404");
+//     }
+
+//     res.render("moods/moodIndex", {
+//       mood,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.render("error/404");
+//   }
+// });
+
 //@desc Delete story
 //@Route DELETE /stories/:id
 router.delete("/:id", ensureAuth, async (req, res) => {
