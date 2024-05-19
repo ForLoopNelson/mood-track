@@ -59,42 +59,43 @@ router.get("/showMoods/", ensureAuth, async (req, res) => {
 })
 
 
-// Is this route needed?
+// single mood test
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
+    
     let moods = await Moods.findById(req.params.id).populate("user").lean()
 
     if (!moods) {
       return res.render("error/404")
     }
 
-    res.render("/moods", {
+    res.render(`/moods/moodindex/`, {
       moods,
     })
   } catch (err) {
     console.error(err)
-    res.render("error/404")
+    res.render("error/devError")
   }
 })
 
 
 // show single mood like the public stories *****TEST
-router.get("/moodIndex/:id", ensureAuth, async (req, res) => {
-  try {
-    let mood = await Moods.findById(req.params.id).populate("user").lean();
+// router.get("/moodIndex/:id", ensureAuth, async (req, res) => {
+//   try {
+//     let mood = await Moods.findById(req.params.id).populate("user").lean();
 
-    if (!mood) {
-      return res.render("error/404");
-    }
+//     if (!mood) {
+//       return res.render("error/404");
+//     }
 
-    res.render("moods/moodIndex", {
-      mood,
-    });
-  } catch (err) {
-    console.error(err);
-    res.render("error/404");
-  }
-});
+//     res.render("moods/moodIndex", {
+//       mood,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.render("error/devError");
+//   }
+// });
 
 // Route to show a single mood at moodIndex
 //@desc Show single mood at moodIndex
