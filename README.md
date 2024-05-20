@@ -14,5 +14,7 @@ TODO:
 
 -- setup another login way using email
 
+--Get view for showing and editing single mood. Or if it becomes too stupid, it's not worth it.
+
 
 
