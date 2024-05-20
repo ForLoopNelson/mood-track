@@ -69,7 +69,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
       return res.render("error/404")
     }
 
-    res.render(`/moods/moodindex/`, {
+    res.render(`stories/moodIndex/:id`, {
       moods,
     })
   } catch (err) {
