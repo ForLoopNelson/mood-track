@@ -4,6 +4,9 @@ A CRUD app for tracking your mood, login with a Gmail account. Create Public and
 ** Start app Development: npm run dev
 
 TODO:
+
+[!IMPORTANT]  -- Timestamp for all posts are wrong. Find the issue and fix it
+
 --Make the Title text a tad bigger when on Mobile. Tablet looks ok
 
 --Get rid of unused JS files
@@ -14,7 +17,7 @@ TODO:
 
 -- setup another login way using email
 
---Get view for showing and editing single mood. Or if it becomes too stupid, it's not worth it.
+
 
 
 
