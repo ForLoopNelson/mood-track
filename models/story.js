@@ -26,6 +26,8 @@ const StorySchema = new mongoose.Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+
+      //for later test. remove the createdAt in story and moods to test created at and updated at times and see if the corrects the bug
     },
   }, //attempt timeStamp
   { timestamps: true }
