@@ -23,12 +23,7 @@ const StorySchema = new mongoose.Schema(
       //!Change: this field should be required because the app will break if the user is not present.
       required: true,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-
-      //for later test. remove the createdAt in story and moods to test created at and updated at times and see if the corrects the bug
-    },
+   
   }, //attempt timeStamp
   { timestamps: true }
 )
