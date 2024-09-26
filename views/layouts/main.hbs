@@ -35,6 +35,41 @@
             plugins: 'wysiwygarea, toolbar, basicstyles, link'
         })
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // Select all elements with a date
+  const createdAtElements = document.querySelectorAll('.created-at');
+  const updatedAtElements = document.querySelectorAll('.updated-at');
+
+  // Loop through and format each 'createdAt' date
+  createdAtElements.forEach(element => {
+    const utcDate = new Date(element.getAttribute('data-date'));
+    const localDate = utcDate.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+    element.textContent = localDate;
+  });
+
+  // Loop through and format each 'updatedAt' date
+  updatedAtElements.forEach(element => {
+    const utcDate = new Date(element.getAttribute('data-date'));
+    const localDate = utcDate.toLocaleString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+    element.textContent = localDate;
+  });
+});
+    </script>
 
 
 </body>
