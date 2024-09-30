@@ -11,9 +11,7 @@ TODO:
 
 --Get rid of unused JS files
 
---Add weather widget to dashboard to show the user their local weather.
-
--- fix animation on letting go text. It goes to fast on mobile devices
+-- Create simple zen garden like mini game to replace the letting go section
 
 -- setup another login way using email
 
