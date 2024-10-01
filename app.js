@@ -96,6 +96,7 @@ app.use("/", require("./routes/index"))
 app.use("/auth", require("./routes/auth"))
 app.use("/stories", require("./routes/stories"))
 app.use("/release", require("./routes/release"))
+app.use("/zen", require("./routes/zen"))
 app.use("/moods", require("./routes/moods"))
 
 
