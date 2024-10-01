@@ -1,0 +1,31 @@
+  <head>
+    <h3>Zen Garden</h3>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #e0d7c6;
+    }
+
+     canvas {
+      display: block;
+      width: 80vw; /* 80% of the viewport width */
+      height: 80vh; /* 80% of the viewport height */
+      background-color: #fff; /* Add a background to make the canvas stand out */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional shadow effect */
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  </style>
+</head>
+<body>
+  <canvas id="zenCanvas"></canvas>
+
+  <script src="js/zenGarden.js"></script>
+</body>
