@@ -1,5 +1,6 @@
 window.onload = function () {
   const canvas = document.getElementById('zenCanvas');
+  const reset = document.getElementById('reset')
   const ctx = canvas.getContext('2d');
 
   // Set the canvas dimensions according to CSS size (viewport based)
@@ -10,7 +11,7 @@ window.onload = function () {
   let points = [];
   const numLines = 40;  // Number of zen lines
   const waveHeight = 5; // Amplitude of the waves
-  const ripples = [];   // Array to store user-drawn ripple positions
+  let ripples = [];   // Array to store user-drawn ripple positions
 
   // Initialize sand pattern lines
   function initPoints() {
@@ -25,8 +26,8 @@ window.onload = function () {
 
   // Draw static Zen garden lines
   function drawSandPattern() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the previous pattern
-    ctx.fillStyle = '#ffffff';  // White background for sand
+    ctx.clearRect(0, 0, canvas.width, canvas.height); 
+    ctx.fillStyle = '#ffffff';  
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.strokeStyle = '#c4b7a1';
@@ -48,10 +49,15 @@ window.onload = function () {
   function drawRipples() {
     ripples.forEach(ripple => {
       ctx.strokeStyle = '#b29b87';
-      ctx.lineWidth = 4;
-      ctx.beginPath();
-      ctx.arc(ripple.x, ripple.y, 20, 0, Math.PI * 2);
-      ctx.stroke();
+      ctx.lineWidth = 2;
+      
+      // Draw 4 parallel lines 
+      for (let i = -30; i <= 30; i += 20) { 
+        ctx.beginPath();
+        ctx.moveTo(ripple.x + i, ripple.y - 20);  
+        ctx.lineTo(ripple.x + i, ripple.y + 20);  
+        ctx.stroke();
+      }
     });
   }
 
@@ -86,4 +92,13 @@ window.onload = function () {
   // Initial setup
   initPoints();
   animateSand();  // Initial drawing of the pattern
+
+ reset.addEventListener('click', () => {
+  ripples = []; // Clear the ripples array
+  points = []; // Clear the points array
+  initPoints(); // Reinitialize points
+  animateSand(); // Redraw the pattern and the ripples
+
+ }) 
+  
 };
