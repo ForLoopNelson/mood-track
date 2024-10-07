@@ -15,6 +15,8 @@ TODO:
 
 -- Test Zen Garden on mobile. Might only function right with mouse movement at this time.
 
+-- Get the drawing on Zen with mouse to stop when user clicks mouse or another way.
+
 -- setup another login way using email
 
 
