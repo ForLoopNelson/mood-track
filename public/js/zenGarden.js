@@ -54,17 +54,17 @@ window.onload = function () {
       // Draw 4 parallel lines 
       for (let i = -30; i <= 30; i += 20) { 
         ctx.beginPath();
-        ctx.moveTo(ripple.x + i, ripple.y - 20);  
-        ctx.lineTo(ripple.x + i, ripple.y + 20);  
+        ctx.moveTo(ripple.x + i, ripple.y - 10);  
+        ctx.lineTo(ripple.x + i, ripple.y + 10);  
         ctx.stroke();
       }
     });
   }
 
   // Animate the pattern when interacting with the garden (simulates drawing in sand)
-  function animateSand(x, y) {
+  function animateSand() {
     points.forEach(point => {
-      point.offset += 0.05;
+      point.offset += 0.10;
     });
 
     drawSandPattern();  // Redraw the sand waves
@@ -80,6 +80,21 @@ window.onload = function () {
     ripples.push({ x, y });  // Add the ripple to the array
     animateSand(x, y);       // Redraw the pattern and the ripples
   });
+
+
+  // Touch event (for mobile)
+canvas.addEventListener('touchmove', function (e) {
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.touches[0]; 
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    ripples.push({ x, y });  
+    animateSand(x, y);       
+
+    // Prevent the default touch behavior like scrolling
+    e.preventDefault();
+});
 
   // Resize the canvas when the window is resized
   window.addEventListener('resize', () => {
