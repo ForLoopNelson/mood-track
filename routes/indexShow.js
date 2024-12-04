@@ -32,7 +32,7 @@ router.get("/", ensureAuth, async (req, res) => {
 //@Route GET /moods/:id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let moods = await Moods.findById(req.params.id).populate("user").lean()
+    let moods = await Moods.findOne({ _id: req.params.id }).populate("user").lean()
 
     if (!moods) {
       return res.render("error/404")
